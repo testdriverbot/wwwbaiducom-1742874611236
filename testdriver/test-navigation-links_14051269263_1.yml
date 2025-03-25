@@ -1,0 +1,13 @@
+version: 4.2.23
+session: 67e22ac497532e5178f67db7
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on a navigation link like "新闻"
+    commands:
+      - command: hover-text
+        text: 新闻
+        description: navigation link for news
+        action: click
