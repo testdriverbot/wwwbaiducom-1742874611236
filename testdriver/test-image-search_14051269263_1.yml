@@ -1,0 +1,13 @@
+version: 4.2.23
+session: 67e22abc97532e5178f67db3
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on "图片"
+    commands:
+      - command: hover-text
+        text: 图片
+        description: images link in the navigation bar
+        action: click
