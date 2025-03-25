@@ -1,0 +1,25 @@
+version: 4.2.23
+session: 67e22afba51b3bc1f44fd98f
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Type "example search query" into the search bar.
+    commands:
+      - command: hover-text
+        text: 百度一下
+        description: search bar on Baidu homepage
+        action: click
+      - command: type
+        text: example search query
+  - prompt: Click the search button.
+    commands:
+      - command: hover-text
+        text: 百度一下
+        description: search button on Baidu homepage
+        action: click
+  - prompt: Assert that search results are displayed.
+    commands:
+      - command: assert
+        expect: search results for "example search query" are displayed
