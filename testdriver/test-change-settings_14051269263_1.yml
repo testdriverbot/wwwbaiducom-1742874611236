@@ -1,0 +1,27 @@
+version: 4.2.23
+session: 67e22aca97532e5178f67dba
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click the settings "设置" button.
+    commands:
+      - command: hover-text
+        text: 设置
+        description: settings button in the top right corner of the browser
+        action: click
+  - prompt: Adjust a setting and save changes.
+    commands:
+      - command: hover-text
+        text: 搜索设置
+        description: search settings option in the settings menu
+        action: click
+      - command: hover-text
+        text: 保存设置
+        description: save settings button in the settings page
+        action: click
+  - prompt: Assert that the setting is saved and reflected in the user experience.
+    commands:
+      - command: assert
+        expect: the settings confirmation message is visible
