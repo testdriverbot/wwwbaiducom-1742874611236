@@ -1,0 +1,17 @@
+version: 4.2.23
+session: 67e22ad8a51b3bc1f44fd961
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the "AI" feature link or button.
+    commands:
+      - command: hover-text
+        text: Ai+
+        description: AI feature link in the navigation bar
+        action: click
+  - prompt: Assert that the AI feature page or modal opens.
+    commands:
+      - command: assert
+        expect: the AI feature page is open with relevant content visible
